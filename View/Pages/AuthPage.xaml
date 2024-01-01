@@ -1,0 +1,33 @@
+﻿<Page x:Class="TaskManager.View.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TaskManager.View.Pages"
+      mc:Ignorable="d" 
+      Height="450" Width="350">
+
+    <Border Background="White" CornerRadius="30">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Авторизация" FontSize="25"
+                       FontWeight="Medium"
+                       HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <TextBox Grid.Row="1" Style="{StaticResource AuthRegTextBox}"/>
+            <Label Grid.Row="1" Content="Почта" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Foreground="Gray" Width="41" Height="24"/>
+            <PasswordBox Grid.Row="2" Style="{StaticResource AuthRegTextBox}"/>
+            <Label Grid.Row="2" Content="Пароль" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Foreground="Gray" Width="49" Height="24"/>
+            <Button Name="regButton" Grid.Row="3" Content="Авторизация" Style="{StaticResource AuthRegPassword}"/>
+            <Button Name="tempSwitchButton" Grid.Row="4" Content="Переход" Style="{StaticResource AuthRegPassword}" Click="tempSwitchButton_Click"/>
+        </Grid>
+    </Border>
+</Page>

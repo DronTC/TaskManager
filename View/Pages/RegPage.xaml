@@ -1,0 +1,44 @@
+﻿<Page x:Class="TaskManager.View.Pages.RegPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TaskManager.View.Pages"
+      mc:Ignorable="d" 
+      Height="450" Width="350">
+
+    <Border Background="White" CornerRadius="30">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Регистрация" FontSize="25"
+                       FontWeight="Medium"
+                       HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <TextBox Grid.Row="1" Style="{StaticResource AuthRegTextBox}"/>
+            <Label Grid.Row="1" Content="Имя" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Foreground="Gray" Width="58" Height="24"/>
+            <TextBox Grid.Row="2" Style="{StaticResource AuthRegTextBox}"/>
+            <Label Grid.Row="2" Content="Фамилия" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Foreground="Gray" Width="58" Height="24"/>
+            <TextBox Grid.Row="3" Style="{StaticResource AuthRegTextBox}"/>
+            <Label Grid.Row="3" Content="Почта" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Foreground="Gray" Width="41" Height="24"/>
+            <PasswordBox Grid.Row="4" Style="{StaticResource AuthRegTextBox}"/>
+            <Label Grid.Row="4" Content="Пароль" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Foreground="Gray" Width="49" Height="24"/>
+            <PasswordBox Grid.Row="5" Style="{StaticResource AuthRegTextBox}"/>
+            <Label Grid.Row="5" Content="Подтвердите пароль" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Foreground="Gray" Width="122" Height="24"/>
+            <Button Name="regButton" Grid.Row="6" Content="Регистрация" Style="{StaticResource AuthRegPassword}"/>
+            <Button Name="tempSwitchButton" Grid.Row="7" Content="Переход" Style="{StaticResource AuthRegPassword}" Click="tempSwitchButton_click"/>
+        </Grid>
+    </Border>
+</Page>
