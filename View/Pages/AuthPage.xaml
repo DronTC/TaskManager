@@ -10,24 +10,31 @@
     <Border Background="White" CornerRadius="30">
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1.0*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
                 <RowDefinition Height="1.5*"/>
-                <RowDefinition Height="0.5*"/>
-                <RowDefinition Height="0.5*"/>
-                <RowDefinition Height="0.5*"/>
-                <RowDefinition Height="0.5*"/>
-                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="Авторизация" FontSize="25"
+            <Grid Grid.Row="1" Margin="40, 5, 40, 15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Вход" FontSize="20" Margin="0, 0, 0, 5"
                        FontWeight="Medium"
-                       HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-            <TextBox Grid.Row="1" Style="{StaticResource AuthRegTextBox}"/>
-            <Label Grid.Row="1" Content="Почта" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       VerticalAlignment="Bottom"/>
+                <Label Grid.Column="1" Content="Регистрация" FontSize="20"
+                       FontWeight="Medium" VerticalAlignment="Bottom" MouseDoubleClick="Label_MouseDoubleClick"/>
+            </Grid>
+            <TextBox Grid.Row="2" Style="{StaticResource AuthRegTextBox}"/>
+            <Label Grid.Row="2" Content="E-mail" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
                    Foreground="Gray" Width="41" Height="24"/>
-            <PasswordBox Grid.Row="2" Style="{StaticResource AuthRegTextBox}"/>
-            <Label Grid.Row="2" Content="Пароль" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+            <PasswordBox Grid.Row="3" Style="{StaticResource AuthRegTextBox}"/>
+            <Label Grid.Row="3" Content="Пароль" Margin="55, 1, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
                    Foreground="Gray" Width="49" Height="24"/>
-            <Button Name="regButton" Grid.Row="3" Content="Авторизация" Style="{StaticResource AuthRegPassword}"/>
-            <Button Name="tempSwitchButton" Grid.Row="4" Content="Переход" Style="{StaticResource AuthRegPassword}" Click="tempSwitchButton_Click"/>
-        </Grid>
+            <Button Name="regButton" Grid.Row="4" Content="Авторизация" Style="{StaticResource AuthRegButton}"/>
+            </Grid>
     </Border>
 </Page>

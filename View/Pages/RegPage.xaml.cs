@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaskManager.View.Pages;
 
 namespace TaskManager.View.Pages
 {
@@ -25,7 +26,7 @@ namespace TaskManager.View.Pages
             InitializeComponent();
         }
 
-        private void tempSwitchButton_click(object sender, RoutedEventArgs e)
+        private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             NavigationService.Navigate(new AuthPage());
         }

@@ -25,7 +25,7 @@ namespace TaskManager.View.Pages
             InitializeComponent();
         }
 
-        private void tempSwitchButton_Click(object sender, RoutedEventArgs e)
+        private void Label_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             NavigationService.Navigate(new RegPage());
         }
